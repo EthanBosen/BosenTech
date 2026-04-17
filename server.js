@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'Public')));
 
 // ==================== ROUTES ====================
-app.get('/', (req, res) => {
+app.get('/home', (req, res) => {
   res.sendFile(path.join(__dirname, 'Public', 'home', 'home.html'));
 });
 
