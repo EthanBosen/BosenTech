@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Bosen Technologies</title>
+    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <main class="fade-in">
+        <div class="logo-container">
+            <img src="../images/bosenlogowhite.jpg" alt="Bosen Technologies Logo" width="300" height="300">
+        </div>
+<nav>
+    <div class="container">
+        <div class="hamburger">☰</div>
+        <ul class="nav-links">
+            <li><a href="../home/home.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="../services/services.html" class="active"><i class="fas fa-cogs"></i> Services</a></li>
+            <li><a href="../catalog/catalog.html"><i class="fas fa-book"></i> Catalog</a></li>
+        </ul>
+    </div>
+</nav>
+        <h1>Services Provided</h1>
+        <div class="accordion">
+            <div class="accordion-item">
+                <button class="accordion-header">Website Development<span class="arrow">⇲</span></button>
+                <div class="accordion-content">
+                    <p>We design and build stunning, responsive websites customized to your business needs, featuring modern aesthetics and a seamless user experience.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">Full Stack Application<span class="arrow">⇲</span></button>
+                <div class="accordion-content">
+                    <p>We provide end-to-end development of robust applications, handling both front-end and back-end to achieve your business objectives.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">Enterprise Software Solutions<span class="arrow">⇲</span></button>
+                <div class="accordion-content">
+                    <p>Tailored software solutions for large-scale enterprises, designed for scalability, security, and operational efficiency.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">Hourly Work<span class="arrow">⇲</span></button>
+                <div class="accordion-content">
+                    <p>Flexible hourly development services for minor tasks, updates, or continuous support.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">Retainer Solutions<span class="arrow">⇲</span></button>
+                <div class="accordion-content">
+                    <p>Dedicated retainer-based support to ensure your projects receive consistent maintenance and timely updates.</p>
+                </div>
+            </div>
+        </div>
+        <button id="pricingInquiryBtn">Request Quote</button>
+        <div id="pricingModal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span id="closeModal" style="cursor: pointer;">×</span>
+                <h2>Pricing Inquiry</h2>
+            <form id="pricingForm" action="/pricing-inquiry" method="POST">
+                <label for="pricingService">Service of Interest:</label>
+                <select id="pricingService" name="pricingService" required>
+                    <!-- your options -->
+                </select>
+                <!-- Optional: add more fields like name/email if you want -->
+                <button type="submit">Submit Inquiry</button>
+                </form>
+                <h4>Submit opens your default email app with a pre-filled message.  
+                    (Seeing Outlook but prefer Gmail/Apple Mail? Go to phone Settings > [Mail/Apps] > Default email app and change it.)</h4>
+            </div>
+        </div>
+    </main>
+    <footer>
+<div class="social-links">
+    <a href="https://www.facebook.com/bosentechnologies.com" target="_blank">
+        <img src="../images/facebook-logo-png-2332.png" alt="Facebook Logo" width="30" height="30">
+    </a>
+</div>
+        <p><a href="#">Privacy</a></p>
+        <p><a href="#">Legal</a></p>
+        <p><a href="#">Terms</a></p>
+        <p id="copyright">Copyright © <span id="year"></span> Bosen Technologies</p>
+    </footer>
+    <script src="services.js"></script>
+</body>
+</html>

@@ -1,0 +1,425 @@
+        /* Ensure full viewport height for sticky footer */
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            padding: 40px 20px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+            flex: 1 0 auto;
+        }
+
+        .logo-container {
+            margin-bottom: 20px;
+        }
+
+        .logo-container img {
+            width: 300px;
+            height: 300px;
+        }
+
+        nav {
+            margin-bottom: 30px;
+            background-color: #f0f8ff;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+            width: 100%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-sizing: border-box;
+            border-radius: 20px;
+        }
+
+        nav .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #004080;
+            font-weight: bold;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #007bff;
+            transform: scale(1.05);
+        }
+
+        nav a.active {
+            color: #007bff;
+            text-decoration: underline;
+        }
+
+        nav a i {
+            margin-right: 8px;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+            padding: 10px;
+            width: 44px; /* Minimum touch target size */
+            height: 44px; /* Minimum touch target size */
+            text-align: center;
+        }
+
+        main h1 {
+            font-size: 2.5em;
+            color: #0054a8;
+            margin-bottom: 20px;
+        }
+
+        main h2 {
+            font-size: 2.0em;
+            color: #0054a8;
+            margin-top: 50px;
+        }
+
+        main h4 {
+            font-size: 0.80em;
+            color: #0054a8;
+            text-align: left;
+            margin-top: 70px;
+        }
+
+        main p {
+            font-size: 1.2em;
+        }
+
+        main a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        main a:hover {
+            text-decoration: underline;
+        }
+
+        form {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form label {
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        form input, form textarea, form select {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        form button {
+            padding: 10px 20px;
+            background-color: #004080;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #007bff;
+        }
+
+        #pricingInquiryBtn {
+            padding: 10px 20px;
+            background-color: #004080;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 20px 0;
+            transition: background-color 0.3s ease;
+        }
+
+        #pricingInquiryBtn:hover {
+            background-color: #007bff;
+        }
+
+        .accordion-item {
+            margin-bottom: 10px;
+        }
+
+        .accordion-header {
+            width: 100%;
+            padding: 15px;
+            background-color: #d6e8f8;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.3em;
+            font-family: 'Times New Roman', Times, serif;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .accordion-header .arrow {
+            position: absolute;
+            right: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-header.active .arrow {
+            transform: rotate(180deg);
+        }
+
+        .accordion-header:hover {
+            background-color: #e0e7ff;
+        }
+
+        .accordion-content {
+            display: none;
+        }
+
+        .accordion-content.active {
+            display: block;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1001;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            width: 300px;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #004080;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        footer .social-links {
+            margin-bottom: 15px;
+        }
+
+        footer img {
+            margin: 0 15px;
+            vertical-align: middle;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            main h1 {
+                font-size: 1.8em;
+            }
+
+            nav {
+                padding: 10px 0;
+                width: 100%;
+            }
+
+            .hamburger {
+                display: block;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #f0f8ff;
+                flex-direction: column;
+                align-items: center;
+                z-index: 999; /* Ensure menu is above other elements */
+                opacity: 0;
+                transform: translateY(-20px);
+                transition: opacity 0.3s ease, transform 0.3s ease;
+                visibility: hidden;
+            }
+
+            .nav-links.show {
+                display: flex;
+                opacity: 1;
+                transform: translateY(0);
+                visibility: visible;
+            }
+
+            .logo-container img {
+                width: 60%;
+                height: auto;
+            }
+
+            main {
+                padding: 20px;
+            }
+
+            footer img {
+                margin: 10px;
+            }
+
+            .modal-content {
+                max-width: 90%;
+                padding: 15px;
+            }
+
+            form input, form textarea, form select {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 430px) {
+            .logo-container img {
+                width: 60%;
+                height: auto;
+            }
+
+            main h1 {
+                font-size: 1.8em;
+            }
+
+            main {
+                padding: 10px;
+            }
+
+            .accordion-header {
+                font-size: 1.1em;
+                padding: 10px;
+            }
+
+            .accordion-content {
+                padding: 10px;
+            }
+
+            #pricingInquiryBtn {
+                padding: 8px 16px;
+                font-size: 0.9em;
+            }
+
+            .nav-links {
+                gap: 10px;
+            }
+        }
+
+/* === POC: Red font on black background === */
+html, body, nav, main, footer, .nav-links {
+    background-color: #000000 !important;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, a, li, span, label, button, input, textarea, nav a, nav a:hover, nav a.active, main a, main a:hover, main h1, main h2, main p, footer, footer a, footer p, .accordion-header, .accordion-content {
+    color: #ff0000 !important;
+}
+
+form button, #pricingInquiryBtn {
+    background-color: #000000 !important;
+    color: #ff0000 !important;
+    border: 1px solid #ff0000 !important;
+}
+
+form input, form textarea {
+    background-color: #000000 !important;
+    border-color: #ff0000 !important;
+}
+
+/* === POC: Red font on black background === */
+html, body, nav, main, footer, .nav-links {
+    background-color: #000000 !important;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, a, li, span, label, button, input, textarea, nav a, nav a:hover, nav a.active, main a, main a:hover, main h1, main h2, main p, footer, footer a, footer p, .accordion-header, .accordion-content {
+    color: #ff0000 !important;
+}
+
+form button, #pricingInquiryBtn {
+    background-color: #000000 !important;
+    color: #ff0000 !important;
+    border: 1px solid #ff0000 !important;
+}
+
+form input, form textarea {
+    background-color: #000000 !important;
+    border-color: #ff0000 !important;
+}
