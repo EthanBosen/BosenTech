@@ -10,7 +10,7 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'Public')));
 
-// Routes
+// ==================== ROUTES ====================
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'Public', 'home', 'home.html'));
 });
@@ -19,11 +19,13 @@ app.get('/catalog', (req, res) => {
   res.sendFile(path.join(__dirname, 'Public', 'catalog', 'catalog.html'));
 });
 
-app.get('/services', (req, res) => {                    
+app.get('/services', (req, res) => {
   res.sendFile(path.join(__dirname, 'Public', 'services', 'services.html'));
 });
 
-// TODO: Add contact form route later if needed
+// Add more routes here later if needed (e.g. contact form POST)
+
+// ===============================================
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
